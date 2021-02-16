@@ -32,6 +32,8 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         required: false
     }
+}, {
+    timestamps: true
 })
 
 UserSchema.pre('save', function (next) {

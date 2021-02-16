@@ -12,6 +12,8 @@ const categorySchema = new mongoose.Schema({
         default: null,
         ref: 'category'
     }
+}, {
+    timestamps: true
 })
 
 categorySchema.pre('save', async function (next) {
