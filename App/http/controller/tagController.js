@@ -3,7 +3,7 @@ import Joi from 'joi'
 
 const index = async ( req, res) => {
     try {
-        const tags = Tag.find()
+        const tags = await Tag.find()
         res.send({
             message: 'All tag list',
             data: tags
